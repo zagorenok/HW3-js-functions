@@ -41,31 +41,33 @@ showNumber(5);
 console.log('#7');
 
 function calcPow(x, n) {
-  return;
+  return x ** n;
 }
-calcPow(5, 3);
-console.log(Math.pow(5, 3));
+console.log(calcPow(5, 3));
 
 console.log('#8');
 
-function isBigger(a, b) {
-  if ( a > b) {
-    return true;
-  } else {
-    return false;
-  }
-}
-console.log(isBigger(5, -1));
+let a = 5;
+let b = -1;
+let isBigger;
 
+  if ( a > b) {
+    isBigger = function() {
+      console.log(true);
+    };
+    } else {
+      result = function() {
+        console.log(false);
+    };
+  }
+isBigger();
 
 console.log('#9');
 
-function isSmaller(a, b) {
-  if ( a < b) {
-    return true;
-  } else {
-    return false;
-  }
-}
-console.log(isSmaller(5, -1));
+let isSmaller = (a < b) ? 
+  function() { console.log(true); } :
+  function() { console.log(false); } ;
+
+  isSmaller();
+
 
